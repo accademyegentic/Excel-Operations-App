@@ -1,0 +1,37 @@
+export interface ExcelRow {
+  [key: string]: any;
+}
+
+export interface UploadedFile {
+  id: string;
+  name: string;
+  data: ExcelRow[];
+  columns: string[];
+}
+
+export interface ChartConfig {
+  xAxis: string;
+  yAxis: string;
+  type: 'bar' | 'line' | 'scatter' | 'pie';
+}
+
+export enum AppTab {
+  UPLOAD = 'UPLOAD',
+  VIEW = 'VIEW',
+  ANALYSIS = 'ANALYSIS',
+  CLEANING = 'CLEANING',
+  COMPARE = 'COMPARE',
+  MERGE = 'MERGE',
+  VLOOKUP = 'VLOOKUP',
+  FORMULA = 'FORMULA',
+  VISUALIZE = 'VISUALIZE'
+}
+
+export interface CleaningAction {
+  type: 'remove_duplicates' | 'remove_empty' | 'uppercase' | 'lowercase' | 'trim' | 'add_prefix' | 'remove_prefix' | 'extract_column' | 'apply_formula' | 'rename_column';
+  column?: string;
+  value?: string;
+  newValue?: string;
+}
+
+export type ExportFormat = 'xlsx' | 'csv' | 'txt';
