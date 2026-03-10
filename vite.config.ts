@@ -16,8 +16,8 @@ export default defineConfig(({ mode }) => {
         outDir: 'dist',
       },
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GeminiAP),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.AIzaSyBWkjoLWNsaQ5UTLYRlHAKswkZKt8t4aEk)
+        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {
